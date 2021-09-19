@@ -17,9 +17,11 @@ def input_students
 end 
 
 #print them
-def print_header
-  puts "The students of Villains Academy"
-  puts "------------"
+def print_header(students)
+    if students.count > 0
+      puts "The students of Villains Academy"
+      puts "------------"
+    end
 end
 
 def print(students)
@@ -31,10 +33,12 @@ end
 #Number of students
 
 def print_footer(students)
-  puts "Overall, we have #{students.count} great students"
+  if students.count > 0
+    puts "Overall, we have #{students.count} great students"
+  end
 end
 
 students = input_students
-print_header()
+print_header(students)
 print(students)
 print_footer(students)
